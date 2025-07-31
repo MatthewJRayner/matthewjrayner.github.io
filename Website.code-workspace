@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../Theresa/Website"
+		},
+		{
+			"path": "../BBB Menu"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "E-Portfolio"
+	}
+}

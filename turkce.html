@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Rayner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/logowhite.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/dbc30a9760.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "yR5_YHQrmAdt_LIwO",
+            });
+        })();
+    </script>
+</head>
+<body onmousemove="cursorGravity(event)">
+    <section id="landing-page" onmousemove="moveStars(event)">
+        <nav>
+            <figure>
+                <img src="Assets/logo.png" alt="" class="logo click">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect 
+                    link__hover-effect--black
+                    ">Benim hakkımda</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Projeler</a>
+                </li>
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">İletişim</a>
+                </li>
+                <li class="nav__link" onclick="toggleContrast()">
+                    <i class="fa-solid fa-circle-half-stroke click"></i>
+                </li>
+                <li class="nav__link">
+                    <a href="#languages">
+                        <i class="fa-solid fa-language click"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="solar-system__wrapper">
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="planet mercury"></div>
+                <div class="planet venus"></div>
+                <div class="planet earth"></div>
+                <div class="planet mars"></div>
+                <div class="planet jupiter"></div>
+                <div class="planet saturn"></div>
+                <div class="planet uranus"></div>
+                <div class="planet neptune"></div>
+            </div>
+        </div>
+        <header class="header">
+            <h1 class="header__title">Merhaba</h1>
+            <h1 class="header__title"><span class="color">Ben Matthew.</span></h1>
+            <p class="section__desc">
+                Kullanıcı dostu ve temiz web uygulamaları ve deneyimleri oluşturmakla ilgilenen bir <b class="color">Frontend Yazılım Mühendisiyim</b>
+                <br> 
+                Hakkımda daha fazla bilgi edinmek için <b class="color pointer" onclick="toggleModal()">buraya tıklayın</b> veya daha fazla bilgi için aşağı kaydırın
+            </p>
+            <ul class="social-links">
+                <li class="links--item click">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </li>
+                <li class="links--item click">
+                    <i class="fa-brands fa-github"></i>
+                </li>
+                <li class="links--item click">
+                    <i class="fa-solid fa-file-lines"></i>
+                </li>
+            </ul>
+        </header>
+        <div class="message__icon click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <a href="#languages">
+            <div class="scroll"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">İşte hakkımda biraz daha bilgi</h3>
+                <h4 class="modal__sub-title">Frontend Yazılım Mühendisi</h4>
+                <p class="modal__desc">
+                    Benim <span class="color">tutkum</span> problemleri çözmek ve her gün nasıl geliştirileceğini öğrenmek. Web siteleri geliştirmeyi ve insanlara bilgilendirici, etkileşimli ve unutulmaz deneyimler sunmayı seven 24 yaşında Güney Afrikalı bir <span class="color">Frontend yazılım mühendisiyim</span>.
+                    <br>
+                    Serbest web geliştiricisi olarak bireysel müşteriler ve işletmelerle çalışma deneyimim var ve büyümeme izin verecek yetenekli bir ekipte çalışarak becerilerimi genişletmeye hevesliyim.              
+                </p>
+                <div class="modal__skills">
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="modal__skill--name">HTML</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="modal__skill--name">CSS</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="modal__skill--name">Javascript</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="modal__skill--name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__close click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Biraz sohbet edelim</h3>
+                <h4 class="modal__sub-title modal__title--contact">Şu anda yeni fırsatlar arıyorum.</h4>
+                <form onsubmit="sendMail(event)" id="contact__form">
+                    <div class="form__item">
+                        <label for="contact__form" class="form__item--label">İsim</label>
+                        <input type="text" class="input" required name="user_name">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">E-posta</label>
+                        <input type="email" class="input" required name="user_email">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">Mesaj</label>
+                        <textarea name="message" id="" class="input" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Göndermek</button>
+                </form>
+                <div class="modal__overlay modal__state--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__state--success">
+                    E-posta için teşekkürler! Yakında size geri dönmek için heyecanlıyım.
+                </div>
+                <div class="modal__overlay modal__state--failure">
+                    Bir şeyler ters gitmiş gibi görünüyor! Lütfen benimle doğrudan iletişime geçin: raynerjmatthew@gmail.com
+                </div>
+            </div>
+        </div>
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--0">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--1">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--2">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--3">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--4">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--5">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--6">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--7">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--8">
+    </section>
+    <section id="languages">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title">Devam etmeden <span class="color">önce</span>.</h1>
+                    <h2 class="section__sub-title">Siteyi seçtiğiniz <span class="color">dilde</span> görüntülediğinizden emin olun</h2>
+                    <ul class="language__list">
+                        <li class="language__item">
+                            <a href="index.html" class="language__item click">
+                                <img src="Assets/gb.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">İngilizce</p>
+                                <p class="language__item--name original-name nihongo">English</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="deutsch.html" class="language__item click">
+                                <img src="Assets/de.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Almanca</p>
+                                <p class="language__item--name original-name nihongo">Deutsch</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="nihongo.html" class="language__item click">
+                                <img src="Assets/jp.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Japonca</p>
+                                <p class="language__item--name original-name nihongo">日本語</p>
+                            </a>
+                        </li>
+                        <li class="language__item current">
+                            <a href="turkce.html" class="language__item click">
+                                <img src="Assets/tr.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Türkçe</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="section__desc">Bunlar konuşabildiğim ve anlayabildiğim dilleri temsil ediyor ve hepsi benim tarafımdan yazıldı.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title">Benim <span class="color">Projelerim</span></h1>
+                    <ul class="projects__list">
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/bbb-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Bread By Bike</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, JavaScript, Liquid</h4>
+                                    <p class="projects__desc--text">Londra Camden'de bir kafe ve fırın için web sitesinin bakımı ve geliştirilmesi. Müşterileri herhangi bir etkinlikten haberdar etmek için düzenli olarak güncellenmesi ve adresler ve ödeme ayrıntıları gibi bilgiler de dahil olmak üzere toptan sipariş alabilmesi gerekiyor. Şu anda daha önce kullanılan Shopify tabanından benim yönettiğim daha özel bir tasarıma geçiliyor.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://www.breadbybike.com" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/portfolio-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">E-Portföy</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
+                                    <p class="projects__desc--text">Bu kendi e-portföy sayfam. Uzaya olan ilgimi kullanıcı dostu, profesyonel ve modern bir tasarımla harmanlamaya çalışırken becerilerimi test etmek için bir meydan okumaydı. Şu anda site için React'i uyguluyor ve onu optimize etmenin yollarını buluyorum. En zorlu kısım, e-postaJS'yi modal ile uygulamak ve fare hareketiyle hareket edecek arka plan yıldızlarını canlandırmaktı. Karanlık ve aydınlık mod oluşturmak da benim için önemliydi, bunu ekleyebildiğim için çok mutluyum.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MatthewJRayner/matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click">
+                                            <a href="https://matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item"></li>
+                            <div class="projects__wrapper">
+                                <img src="Assets/ella-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Sanatçı Portföyü</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
+                                    <p class="projects__desc--text">Kuzey Londra'da yaşayan bir seramik sanatçısı için hazırlanmış bir web sitesi. Ağ oluşturmak ve markasını büyütmeye yardımcı olmak için kullanabileceği bir portföy oluşturmak için onunla birlikte çalıştım</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MattRayner2000/MattRayner2000.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click"></li>
+                                            <a href="https://mattrayner2000.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#landing-page" class="footer__anchor">
+                    <figure class="footer__logo--mask">
+                        <img src="Assets/logowhite.png" alt="" class="footer__logo--img">
+                    </figure>
+                    <span class="footer__logo--popper">Top</span>
+                </a>
+                <div class="footer__links--list">
+                    <a target="_blank" href="https://github.com/MatthewJRayner" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Github</a>
+                    <a target="_blank" href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">LinkedIn</a>
+                    <a target="_blank" onclick="toggleModal()" href="#landing-page" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">İletişim</a>
+                    <a target="_blank" href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Özgeçmiş</a>
+                </div>
+                <div class="footer__copyright">Copyright © 2024 Matthew Rayner</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
