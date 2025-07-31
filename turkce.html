@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body onmousemove="cursorGravity(event)">
+<body>
     <section id="landing-page" onmousemove="moveStars(event)">
         <nav>
             <figure>
@@ -35,7 +35,7 @@
                     nav__link--anchor
                     link__hover-effect 
                     link__hover-effect--black
-                    ">Benim hakkımda</a>
+                    ">Hakkımda</a>
                 </li>
                 <li class="nav__link">
                     <a href="#projects" class="
@@ -51,8 +51,8 @@
                     link__hover-effect--black
                     ">İletişim</a>
                 </li>
-                <li class="nav__link" onclick="toggleContrast()">
-                    <i class="fa-solid fa-circle-half-stroke click"></i>
+                <li class="nav__link">
+                    <i class="fa-solid fa-circle-half-stroke click" onclick="toggleContrast()"></i>
                 </li>
                 <li class="nav__link">
                     <a href="#languages">
@@ -75,22 +75,28 @@
             </div>
         </div>
         <header class="header">
-            <h1 class="header__title">Merhaba</h1>
-            <h1 class="header__title"><span class="color">Ben Matthew.</span></h1>
+            <h1 class="header__title"><span class="color">Merhaba,</span> ben Matthew.</h1>
+            <h1 class="header__title"></h1>
             <p class="section__desc">
-                Kullanıcı dostu ve temiz web uygulamaları ve deneyimleri oluşturmakla ilgilenen bir <b class="color">Frontend Yazılım Mühendisiyim</b>
-                <br> 
-                Hakkımda daha fazla bilgi edinmek için <b class="color pointer" onclick="toggleModal()">buraya tıklayın</b> veya daha fazla bilgi için aşağı kaydırın
+                Ben <b class="color">Full Stack Software Engineer</b> olarak kullanıcı dostu ve temiz web uygulamaları ve deneyimleri oluşturmakla ilgileniyorum.
+                <br>
+                Daha fazla bilgi edinmek için <b class="color pointer" onclick="toggleModal()">buraya tıklayın</b> veya daha fazla bilgi için aşağı kaydırın.
             </p>
             <ul class="social-links">
                 <li class="links--item click">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="" class="social__anchor" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
                 </li>
                 <li class="links--item click">
-                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/MatthewJRayner" class="social__anchor" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </li>
                 <li class="links--item click">
-                    <i class="fa-solid fa-file-lines"></i>
+                    <a href="Assets/Resume ENG.pdf" class="social__anchor" target="_blank">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
                 </li>
             </ul>
         </header>
@@ -102,12 +108,12 @@
         </a>
         <div class="modal">
             <div class="modal__half modal__about">
-                <h3 class="modal__title">İşte hakkımda biraz daha bilgi</h3>
-                <h4 class="modal__sub-title">Frontend Yazılım Mühendisi</h4>
+                <h3 class="modal__title">Hakkımda biraz daha bilgi.</h3>
+                <h4 class="modal__sub-title">Full Stack Software Engineer</h4>
                 <p class="modal__desc">
-                    Benim <span class="color">tutkum</span> problemleri çözmek ve her gün nasıl geliştirileceğini öğrenmek. Web siteleri geliştirmeyi ve insanlara bilgilendirici, etkileşimli ve unutulmaz deneyimler sunmayı seven 24 yaşında Güney Afrikalı bir <span class="color">Frontend yazılım mühendisiyim</span>.
+                    Benim tutkum, sorunları çözmek ve her gün nasıl gelişeceğimi öğrenmektir. 25 yaşında Güney Afrikalı bir <span class="color">full stack yazılım mühendisi</span> olarak, web siteleri geliştirmeyi ve insanlara bilgilendirici, etkileşimli ve unutulmaz <span class="color">deneyimler</span> sunmayı seviyorum.
                     <br>
-                    Serbest web geliştiricisi olarak bireysel müşteriler ve işletmelerle çalışma deneyimim var ve büyümeme izin verecek yetenekli bir ekipte çalışarak becerilerimi genişletmeye hevesliyim.              
+                    Bireysel müşteriler ve işletmelerle serbest web geliştirici olarak çalışma deneyimim var ve büyümemi sağlayacak <span class="color">yetenekli</span> bir ekipte çalışarak becerilerimi geliştirmeye <span class="color">istekliyim</span>.
                 </p>
                 <div class="modal__skills">
                     <figure class="modal__skill">
@@ -125,13 +131,28 @@
                     <figure class="modal__skill">
                         <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
                         <span class="modal__skill--name">React</span>
+                    </figure><figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-512/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png" alt="">
+                        <span class="modal__skill--name">Python</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-512/free-django-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-7-pack-icons-282754.png" alt="">
+                        <span class="modal__skill--name">Django</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="">
+                        <span class="modal__skill--name">PostgreSQL</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="">
+                        <span class="modal__skill--name">Tailwind CSS</span>
                     </figure>
                 </div>
             </div>
             <div class="modal__half modal__contact">
                 <i class="fas fa-times modal__close click" onclick="toggleModal()"></i>
-                <h3 class="modal__title modal__title--contact">Biraz sohbet edelim</h3>
-                <h4 class="modal__sub-title modal__title--contact">Şu anda yeni fırsatlar arıyorum.</h4>
+                <h3 class="modal__title modal__title--contact">Hadi sohbet edelim.</h3>
+                <h4 class="modal__sub-title modal__title--contact">Şu anda yeni fırsatlar arıyorum</h4>
                 <form onsubmit="sendMail(event)" id="contact__form">
                     <div class="form__item">
                         <label for="contact__form" class="form__item--label">İsim</label>
@@ -145,16 +166,16 @@
                         <label for="#contact__form" class="form__item--label">Mesaj</label>
                         <textarea name="message" id="" class="input" required></textarea>
                     </div>
-                    <button id="contact__submit" class="form__submit">Göndermek</button>
+                    <button id="contact__submit" class="form__submit">Bana gönder</button>
                 </form>
                 <div class="modal__overlay modal__state--loading">
                     <i class="fa-solid fa-spinner"></i>
                 </div>
                 <div class="modal__overlay modal__state--success">
-                    E-posta için teşekkürler! Yakında size geri dönmek için heyecanlıyım.
+                    Teşekkürler! En kısa sürede geri dönmeyi dört gözle bekliyorum.
                 </div>
                 <div class="modal__overlay modal__state--failure">
-                    Bir şeyler ters gitmiş gibi görünüyor! Lütfen benimle doğrudan iletişime geçin: raynerjmatthew@gmail.com
+                    Bir şeyler ters gitmiş gibi görünüyor! Lütfen doğrudan benimle iletişime geçin: raynerjmatthew@gmail.com
                 </div>
             </div>
         </div>
@@ -172,11 +193,11 @@
         <div class="container">
             <div class="row">
                 <div class="section__wrapper">
-                    <h1 class="section__title">Devam etmeden <span class="color">önce</span>.</h1>
-                    <h2 class="section__sub-title">Siteyi seçtiğiniz <span class="color">dilde</span> görüntülediğinizden emin olun</h2>
+                    <h1 class="section__title">Devam <span class="color">etmeden</span> önce.</h1>
+                    <h2 class="section__sub-title">Siteyi tercih ettiğiniz <span class="color">dil</span>de görüntülediğinizden emin olun</h2>
                     <ul class="language__list">
-                        <li class="language__item">
-                            <a href="index.html" class="language__item click">
+                        <li class="language__item click">
+                            <a href="\" class="language__item click">
                                 <img src="Assets/gb.svg" alt="" class="language__item--flag">
                                 <p class="language__item--name site-name">İngilizce</p>
                                 <p class="language__item--name original-name nihongo">English</p>
@@ -203,22 +224,40 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="section__desc">Bunlar konuşabildiğim ve anlayabildiğim dilleri temsil ediyor ve hepsi benim tarafımdan yazıldı.</p>
+                    <p class="section__desc">Bunlar benim konuşabildiğim ve anlayabildiğim dilleri temsil ediyor ve hepsi benim tarafımdan yazılmıştır.</p>
                 </div>
             </div>
         </div>
     </section>
     <section id="projects">
         <div class="container">
-            <div class="row"></div>
-        </div>
-    </section>
-    <section id="about">
-        <div class="container">
             <div class="row">
                 <div class="section__wrapper">
-                    <h1 class="section__title">Benim <span class="color">Projelerim</span></h1>
+                    <h1 class="section__title">Işte bazı <span class="color">projelerim</span>.</h1>
                     <ul class="projects__list">
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/dashboard-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Satış Paneli</h3>
+                                    <h4 class="projects__desc--sub-title">React, Django, Postgres</h4>
+                                    <p class="projects__desc--text">Misafirperverlik sektöründeki bir müşterim için özel olarak geliştirilmiş bir satış paneli. Kullanıcı kimlik doğrulaması, veri görselleştirmesi ve gerçek zamanlı güncellemeler içeren tam kapsamlı bir uygulama. Bağlantı, arka uca bağlı olmayan sahte verilerle oluşturulmuş bir önizlemeye yönlendirir.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MatthewJRayner/breadbybike-dashboard" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click"></li>
+                                            <a href="sales-dashboard-preview.vercel.app" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
                         <li class="projects__item">
                             <div class="projects__wrapper">
                                 <img src="Assets/bbb-mockup.png" alt="" class="projects__wrapper--img">
@@ -226,7 +265,7 @@
                                 <div class="projects__desc">
                                     <h3 class="projects__desc--title">Bread By Bike</h3>
                                     <h4 class="projects__desc--sub-title">HTML, CSS, JavaScript, Liquid</h4>
-                                    <p class="projects__desc--text">Londra Camden'de bir kafe ve fırın için web sitesinin bakımı ve geliştirilmesi. Müşterileri herhangi bir etkinlikten haberdar etmek için düzenli olarak güncellenmesi ve adresler ve ödeme ayrıntıları gibi bilgiler de dahil olmak üzere toptan sipariş alabilmesi gerekiyor. Şu anda daha önce kullanılan Shopify tabanından benim yönettiğim daha özel bir tasarıma geçiliyor.</p>
+                                    <p class="projects__desc--text">Camden, Londra’daki bir kafe ve fırının web sitesini yönetiyor ve geliştiriyorum. Müşterileri etkinliklerden haberdar edebilmek ve toptan siparişleri (adres ve ödeme bilgileri dahil) alabilmek için site düzenli olarak güncellenmeli. Şu anda Shopify tabanlı yapıdan, benim öncülüğümde daha özelleştirilmiş bir tasarıma geçiliyor.</p>
                                     <ul class="projects__desc--links">
                                         <li class="projects__links--item click">
                                             <a href="https://www.breadbybike.com" class="projects__links--anchor" target="_blank">
@@ -242,9 +281,9 @@
                                 <img src="Assets/portfolio-mockup.png" alt="" class="projects__wrapper--img">
                                 <div class="projects__wrapper--bg"></div>
                                 <div class="projects__desc">
-                                    <h3 class="projects__desc--title">E-Portföy</h3>
+                                    <h3 class="projects__desc--title">E-Portfolio</h3>
                                     <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
-                                    <p class="projects__desc--text">Bu kendi e-portföy sayfam. Uzaya olan ilgimi kullanıcı dostu, profesyonel ve modern bir tasarımla harmanlamaya çalışırken becerilerimi test etmek için bir meydan okumaydı. Şu anda site için React'i uyguluyor ve onu optimize etmenin yollarını buluyorum. En zorlu kısım, e-postaJS'yi modal ile uygulamak ve fare hareketiyle hareket edecek arka plan yıldızlarını canlandırmaktı. Karanlık ve aydınlık mod oluşturmak da benim için önemliydi, bunu ekleyebildiğim için çok mutluyum.</p>
+                                    <p class="projects__desc--text">Bu portfolyo sayfası tamamen bana ait. Uzaya olan ilgimi kullanıcı dostu, profesyonel ve modern bir tasarımla birleştirmeyi denediğim bir beceri testi oldu.</p>
                                     <ul class="projects__desc--links">
                                         <li class="projects__links--item click">
                                             <a href="https://github.com/MatthewJRayner/matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
@@ -253,29 +292,6 @@
                                         </li>
                                         <li class="projects__links--item click">
                                             <a href="https://matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="projects__item"></li>
-                            <div class="projects__wrapper">
-                                <img src="Assets/ella-mockup.png" alt="" class="projects__wrapper--img">
-                                <div class="projects__wrapper--bg"></div>
-                                <div class="projects__desc">
-                                    <h3 class="projects__desc--title">Sanatçı Portföyü</h3>
-                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
-                                    <p class="projects__desc--text">Kuzey Londra'da yaşayan bir seramik sanatçısı için hazırlanmış bir web sitesi. Ağ oluşturmak ve markasını büyütmeye yardımcı olmak için kullanabileceği bir portföy oluşturmak için onunla birlikte çalıştım</p>
-                                    <ul class="projects__desc--links">
-                                        <li class="projects__links--item click">
-                                            <a href="https://github.com/MattRayner2000/MattRayner2000.github.io" class="projects__links--anchor" target="_blank">
-                                                <i class="fa-brands fa-github"></i>
-                                            </a>
-                                        </li>
-                                        <li class="projects__links--item click"></li>
-                                            <a href="https://mattrayner2000.github.io" class="projects__links--anchor" target="_blank">
                                                 <i class="fa-solid fa-link"></i>
                                             </a>
                                         </li>
@@ -308,18 +324,18 @@
                     link__hover-effect
                     link__hover-effect--white
                     ">LinkedIn</a>
-                    <a target="_blank" onclick="toggleModal()" href="#landing-page" class="
+                    <a onclick="toggleModal()" href="#landing-page" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
-                    ">İletişim</a>
-                    <a target="_blank" href="" class="
+                    ">Contact</a>
+                    <a target="_blank" href="Assets/Resume ENG.pdf" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
-                    ">Özgeçmiş</a>
+                    ">Resume</a>
                 </div>
-                <div class="footer__copyright">Copyright © 2024 Matthew Rayner</div>
+                <div class="footer__copyright">Copyright © 2025 Matthew Rayner</div>
             </div>
         </div>
     </section>

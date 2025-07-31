@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Rayner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/logowhite.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/dbc30a9760.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "yR5_YHQrmAdt_LIwO",
+            });
+        })();
+    </script>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveStars(event)">
+        <nav>
+            <figure>
+                <img src="Assets/logo.png" alt="" class="logo click">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect 
+                    link__hover-effect--black
+                    ">Über mich</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Projekte</a>
+                </li>
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Kontakt</a>
+                </li>
+                <li class="nav__link">
+                    <i class="fa-solid fa-circle-half-stroke click" onclick="toggleContrast()"></i>
+                </li>
+                <li class="nav__link">
+                    <a href="#languages">
+                        <i class="fa-solid fa-language click"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="solar-system__wrapper">
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="planet mercury"></div>
+                <div class="planet venus"></div>
+                <div class="planet earth"></div>
+                <div class="planet mars"></div>
+                <div class="planet jupiter"></div>
+                <div class="planet saturn"></div>
+                <div class="planet uranus"></div>
+                <div class="planet neptune"></div>
+            </div>
+        </div>
+        <header class="header">
+            <h1 class="header__title"><span class="color">Hey,</span> ich bin Matthew.</h1>
+            <h1 class="header__title"></h1>
+            <p class="section__desc">
+                Ich bin ein <b class="color">Full-Stack-Softwareentwickler</b> und interessier mich dafür, benuzterfreundliche und saubere Webanwendungen und -erlebnisse zu schaffen.
+                <br>
+                Um mehr über mich zu erfahren, <b class="color pointer" onclick="toggleModal()">klicken Sie hier</b> oder scrollen Sie nach unten für weitere Informationen.
+            </p>
+            <ul class="social-links">
+                <li class="links--item click">
+                    <a href="" class="social__anchor" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="links--item click">
+                    <a href="https://github.com/MatthewJRayner" class="social__anchor" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="links--item click">
+                    <a href="Assets/Resume ENG.pdf" class="social__anchor" target="_blank">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="message__icon click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <a href="#languages">
+            <div class="scroll"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Hier ist ein bisschen mehr über mich.</h3>
+                <h4 class="modal__sub-title">Full-Stack-Softwareentwickler</h4>
+                <p class="modal__desc">
+                    Meine Leidenschaft ist es, Probleme zu lösen und jeden Tag zu lernen, wie ich mich verbessern kann. Ich bin ein 25-jähriger südafrikanischer <span class="color">Full-Stack-Softwareentwickler</span>, der es liebt, Websites zu entwickeln und den Menschen informative, interaktive und unvergessliche <span class="color">Erlebnisse</span> zu bieten.
+                    <br>
+                    Ich habe Erfahrung in der Zusammenarbeit mit einzelnen Kunden und Unternehmen als freiberuflicher Webentwickler und bin <span class="color">eifrig</span>, meine Fähigkeiten in einem <span class="color">talentierten</span> Team zu erweitern, das mir Wachstum ermöglichen würde.
+                </p>
+                <div class="modal__skills">
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="modal__skill--name">HTML</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="modal__skill--name">CSS</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="modal__skill--name">Javascript</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="modal__skill--name">React</span>
+                    </figure><figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-512/free-python-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226051.png" alt="">
+                        <span class="modal__skill--name">Python</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-512/free-django-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-7-pack-icons-282754.png" alt="">
+                        <span class="modal__skill--name">Django</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" alt="">
+                        <span class="modal__skill--name">PostgreSQL</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="">
+                        <span class="modal__skill--name">Tailwind CSS</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__close click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Lass uns ins Gespräch kommen.</h3>
+                <h4 class="modal__sub-title modal__title--contact">Ich suche derzeit nach neuen Möglichkeiten</h4>
+                <form onsubmit="sendMail(event)" id="contact__form">
+                    <div class="form__item">
+                        <label for="contact__form" class="form__item--label">Name</label>
+                        <input type="text" class="input" required name="user_name">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">E-Mail</label>
+                        <input type="email" class="input" required name="user_email">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">Nachricht</label>
+                        <textarea name="message" id="" class="input" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Schick es mir</button>
+                </form>
+                <div class="modal__overlay modal__state--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__state--success">
+                    Danke für die E-Mail! Ich freue mich darauf, bald von Ihnen zu hören.
+                </div>
+                <div class="modal__overlay modal__state--failure">
+                    Etwas scheint schief gelaufen zu sein! Bitte kontaktieren Sie mich direkt unter: raynerjmatthew@gmail.com
+                </div>
+            </div>
+        </div>
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--0">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--1">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--2">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--3">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--4">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--5">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--6">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--7">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--8">
+    </section>
+    <section id="languages">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title">Bevor Sie <span class="color">fortfahren</span>.</h1>
+                    <h2 class="section__sub-title">Stellen Sie sicher, dass Sie die Website in der <span class="color">Sprache</span> Ihrer Wahl anzeigen</h2>
+                    <ul class="language__list">
+                        <li class="language__item click">
+                            <a href="\" class="language__item click">
+                                <img src="Assets/gb.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Englisch</p>
+                                <p class="language__item--name original-name nihongo">English</p>
+                            </a>
+                        </li>
+                        <li class="language__item current">
+                            <a href="deutsch.html" class="language__item click">
+                                <img src="Assets/de.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Deutsch</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="nihongo.html" class="language__item click">
+                                <img src="Assets/jp.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Japanisch</p>
+                                <p class="language__item--name original-name nihongo">日本語</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="turkce.html" class="language__item click">
+                                <img src="Assets/tr.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">Türkisch</p>
+                                <p class="language__item--name original-name nihongo">Türkçe</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="section__desc">Diese repräsentieren die Sprachen, die ich sprechen und verstehen kann, und sind alle von mir verfasst.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title">Hier sind einige meiner <span class="color">Projekte</span>.</h1>
+                    <ul class="projects__list">
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/dashboard-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Sales Dashboard</h3>
+                                    <h4 class="projects__desc--sub-title">React, Django, Postgres</h4>
+                                    <p class="projects__desc--text">Individuelles Verkaufs-Dashboard für meinen Kunden in der Gastronomiebranche. Full-Stack-Anwendung mit Benutzer-Authentifizierung, Datenvisualisierung und Echtzeit-Updates. Der Link führt zu einer Vorschau der Website mit Dummy-Daten, die nicht mit einem Backend verbunden sind.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MatthewJRayner/breadbybike-dashboard" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click"></li>
+                                            <a href="sales-dashboard-preview.vercel.app" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/bbb-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Bread By Bike</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, JavaScript, Liquid</h4>
+                                    <p class="projects__desc--text">Wartung und derzeitige Entwicklung der Website für ein Café und eine Bäckerei in London, Camden. Es muss regelmäßig aktualisiert werden, um die Kunden über Veranstaltungen zu informieren, sowie Bestellungen für den Großhandel entgegenzunehmen, einschließlich Informationen wie Adressen und Zahlungsdetails. Derzeit Übergang von der zuvor verwendeten Shopify-Basis zu einem maßgeschneiderten Design, das ich leite.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://www.breadbybike.com" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/portfolio-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">E-Portfolio</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
+                                    <p class="projects__desc--text">Diese E-Portfolio-Seite stammt von mir und wurde entwickelt, um meine Fähigkeiten zu testen und Interessen an Weltraum mit einem benutzerfreundlichen, professionellen und modernen Design zu verbinden.</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MatthewJRayner/matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click">
+                                            <a href="https://matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#landing-page" class="footer__anchor">
+                    <figure class="footer__logo--mask">
+                        <img src="Assets/logowhite.png" alt="" class="footer__logo--img">
+                    </figure>
+                    <span class="footer__logo--popper">Oben</span>
+                </a>
+                <div class="footer__links--list">
+                    <a target="_blank" href="https://github.com/MatthewJRayner" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Github</a>
+                    <a target="_blank" href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">LinkedIn</a>
+                    <a onclick="toggleModal()" href="#landing-page" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Kontakt</a>
+                    <a target="_blank" href="Assets/Resume ENG.pdf" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Lebenslauf</a>
+                </div>
+                <div class="footer__copyright">Copyright © 2025 Matthew Rayner</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
