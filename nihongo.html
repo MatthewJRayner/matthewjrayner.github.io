@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -318,4 +319,326 @@
         </div>
     </section>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Rayner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Assets/logowhite.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/dbc30a9760.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "yR5_YHQrmAdt_LIwO",
+            });
+        })();
+    </script>
+</head>
+<body onmousemove="cursorGravity(event)">
+    <section id="landing-page" onmousemove="moveStars(event)">
+        <nav>
+            <figure>
+                <img src="Assets/logo.png" alt="" class="logo click">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect 
+                    link__hover-effect--black
+                    ">私について</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">プロジェクト</a>
+                </li>
+                <li class="nav__link">
+                    <a onclick="toggleModal()" href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">コンタクト</a>
+                </li>
+                <li class="nav__link" onclick="toggleContrast()">
+                    <i class="fa-solid fa-circle-half-stroke click"></i>
+                </li>
+                <li class="nav__link">
+                    <a href="#languages">
+                        <i class="fa-solid fa-language click"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="solar-system__wrapper">
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="planet mercury"></div>
+                <div class="planet venus"></div>
+                <div class="planet earth"></div>
+                <div class="planet mars"></div>
+                <div class="planet jupiter"></div>
+                <div class="planet saturn"></div>
+                <div class="planet uranus"></div>
+                <div class="planet neptune"></div>
+            </div>
+        </div>
+        <header class="header">
+            <h1 class="header__title">こんにちは</h1>
+            <h1 class="header__title"><span class="color">マッシューです。</span></h1>
+            <p class="section__desc">
+                私は、ユーザーフレンドリーでクリーンなウェブアプリケーションとエクスペリエンスを作ることに興味がある<span class="color">フロントエンドソフトウェアエンジニア</span>です。 
+                私についてもっと知りたい方は、<b class="color pointer" onclick="toggleModal()">ここをクイック</b>擦れか、下にスクロールしてください。
+            </p>
+            <ul class="social-links">
+                <li class="links--item click">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </li>
+                <li class="links--item click">
+                    <i class="fa-brands fa-github"></i>
+                </li>
+                <li class="links--item click">
+                    <i class="fa-solid fa-file-lines"></i>
+                </li>
+            </ul>
+        </header>
+        <div class="message__icon click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <a href="#languages">
+            <div class="scroll"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">私についてもう少し</h3>
+                <h4 class="modal__sub-title">フロントエンドソフトウェアエンジニア</h4>
+                <p class="modal__desc">
+                    私の情熱は、問題を解決し、日々改善する方法を学ぶことです。私は２４歳の南アフリカ人<span class="color">フロントエンド・ソフトウェア・エンジニア</span>で、ウェブサイトを開発し、有益でインタラクティブな忘れられない<span class="color">体験</span>を人々に提供することが大好きです。
+                    <br>
+                    フリーランスのウェブデベロッパーとして個人クライアントや企業と仕事をした経験があり、自分を成長させてくれる優秀なチームで働くことで自分のスキルを伸ばしたいと思っています。              
+                </p>
+                <div class="modal__skills">
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="modal__skill--name">HTML</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="modal__skill--name">CSS</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="modal__skill--name">Javascript</span>
+                    </figure>
+                    <figure class="modal__skill">
+                        <img class="modal__skill--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="modal__skill--name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__close click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">チャットしましょう</h3>
+                <h4 class="modal__sub-title modal__title--contact">今、新しい機会を探しています。</h4>
+                <form onsubmit="sendMail(event)" id="contact__form">
+                    <div class="form__item">
+                        <label for="contact__form" class="form__item--label">名前</label>
+                        <input type="text" class="input" required name="user_name">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">Eメール</label>
+                        <input type="email" class="input" required name="user_email">
+                    </div>
+                    <div class="form__item">
+                        <label for="#contact__form" class="form__item--label">メッセージ</label>
+                        <textarea name="message" id="" class="input" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">送ります</button>
+                </form>
+                <div class="modal__overlay modal__state--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__state--success">
+                    送ってくれたありがとうございます！
+                </div>
+                <div class="modal__overlay modal__state--failure">
+                    何かが間違っているようです！私に直接ご連絡ください： raynerjmatthew@gmail.com
+                </div>
+            </div>
+        </div>
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--0">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--1">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--2">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--3">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--4">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--5">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--6">
+        <img src="Assets/star-sharp-svgrepo-com.svg" class="star star--7">
+        <img src="Assets/star-alt-3-svgrepo-com.svg" class="star star--8">
+    </section>
+    <section id="languages">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title"><span class="color">続ける</span>前に。</h1>
+                    <h2 class="section__sub-title">サイトがお好みの<span class="color">言語</span>で表示されていることを確認してください</h2>
+                    <ul class="language__list">
+                        <li class="language__item">
+                            <a href="index.html" class="language__item click">
+                                <img src="Assets/gb.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">英語</p>
+                                <p class="language__item--name original-name nihongo">English</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="deutsch.html" class="language__item click">
+                                <img src="Assets/de.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">ドイツ語</p>
+                                <p class="language__item--name original-name nihongo">Deutsch</p>
+                            </a>
+                        </li>
+                        <li class="language__item click current">
+                            <a href="nihongo.html" class="language__item click">
+                                <img src="Assets/jp.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">日本語</p>
+                            </a>
+                        </li>
+                        <li class="language__item click">
+                            <a href="turkce.html" class="language__item click">
+                                <img src="Assets/tr.svg" alt="" class="language__item--flag">
+                                <p class="language__item--name site-name">トルコ語</p>
+                                <p class="language__item--name original-name nihongo">Türkçe</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="section__desc">これらは私が話し、理解できる言語を表しており、すべて私が書いたものである。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="section__wrapper">
+                    <h1 class="section__title">私の<span class="color">プロジェクト</span>。</h1>
+                    <ul class="projects__list">
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/bbb-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Bread By Bike</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, JavaScript, Liquid</h4>
+                                    <p class="projects__desc--text">ロンドンのカムデンにあるカフェ＆ベーカリーのウェブサイトをメンテナンスし、現在も開発中。定期的な更新が必要で、お客様にイベントのお知らせをしたり、住所や支払い情報などの卸売り注文を受けたりできるようにする必要があります。現在、以前使用していたShopifyのベースから、私が主導する、よりカスタムフィットしたデザインに移行しています。</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="" class="projects__links--anchor">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item">
+                            <div class="projects__wrapper">
+                                <img src="Assets/portfolio-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">Eポートフォリオ</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
+                                    <p class="projects__desc--text">まさに自分自身のeポートフォリオのページだ。宇宙への興味と、ユーザーフレンドリーでプロフェッショナル、そしてモダンなデザインを融合させるという、自分のスキルを試す挑戦だった。現在、このサイトにReactを実装し、最適化する方法を模索しています。最も難しかったのは、モーダルでemailJSを実装することと、マウスの動きに合わせて背景の星が動くようにアニメーションさせることでした。ダークモードとライトモードを作ることも私にとっては重要でした。</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="https://github.com/MatthewJRayner/matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li class="projects__links--item click">
+                                            <a href="https://matthewjrayner.github.io" class="projects__links--anchor" target="_blank">
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projects__item"></li>
+                            <div class="projects__wrapper">
+                                <img src="Assets/ella-mockup.png" alt="" class="projects__wrapper--img">
+                                <div class="projects__wrapper--bg"></div>
+                                <div class="projects__desc">
+                                    <h3 class="projects__desc--title">アーティスト・ポートフォリオ</h3>
+                                    <h4 class="projects__desc--sub-title">HTML, CSS, Javascript</h4>
+                                    <p class="projects__desc--text">北ロンドンを拠点とする陶芸家のためのウェブサイト。彼女がネットワークを作り、ブランドを成長させるために使えるものを作るために、ポートフォリオ作りを彼女と一緒に行った。</p>
+                                    <ul class="projects__desc--links">
+                                        <li class="projects__links--item click">
+                                            <a href="" class="projects__links--anchor">
+                                                <i class="fa-brands fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#landing-page" class="footer__anchor">
+                    <figure class="footer__logo--mask">
+                        <img src="Assets/logowhite.png" alt="" class="footer__logo--img">
+                    </figure>
+                    <span class="footer__logo--popper">上</span>
+                </a>
+                <div class="footer__links--list">
+                    <a target="_blank" href="https://github.com/MatthewJRayner" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">Github</a>
+                    <a href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">LinkedIn</a>
+                    <a onclick="toggleModal()" href="#landing-page" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">コンタクト</a>
+                    <a href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">レジュメ</a>
+                </div>
+                <div class="footer__copyright">Copyright © 2024 Matthew Rayner</div>
+            </div>
+        </div>
+    </section>
+</body>
+>>>>>>> e01bf77fe2846619fba2ccb26806d0704905eca0
 </html>
