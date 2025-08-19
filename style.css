@@ -880,9 +880,8 @@ header .section__desc {
     transition: all 600ms ease;
 }
 
-.projects__wrapper:hover .projects__wrapper--img,
-.projects__wrapper:active .projects__wrapper--img {
-    transform: scale(1.07);
+.projects__wrapper:hover .projects__wrapper--img {
+    transform: scale(1.20);
     filter: blur(5px);
 }
 
@@ -897,8 +896,7 @@ header .section__desc {
     transition: all 450ms ease;
 }
 
-.projects__wrapper:hover .projects__wrapper--bg,
-.projects__wrapper:active .projects__wrapper--bg  {
+.projects__wrapper:hover .projects__wrapper--bg {
     opacity: 0.7;
 }
 
@@ -913,8 +911,7 @@ header .section__desc {
     transition: opacity 300ms, transform 450ms ease;
 }
 
-.projects__wrapper:hover .projects__desc,
-.projects__wrapper:active .projects__desc {
+.projects__wrapper:hover .projects__desc {
     opacity: 1;
     transform: translateY(-50%);
 }
