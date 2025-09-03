@@ -58,8 +58,6 @@ function moveStars(event) {
     const x = event.clientX * scaleFactor;
     const y = event.clientY * scaleFactor;
 
-    console.log(x, y);
-
     for (let i = 0; i < stars.length; ++i) {
         const isOdd = i % 2 !== 0;
         const boolInt = isOdd ? -1 : 1;
