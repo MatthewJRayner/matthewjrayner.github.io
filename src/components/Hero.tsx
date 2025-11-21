@@ -38,17 +38,17 @@ export default function Hero() {
     <section id="landing-page" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20">
       
       {/* Solar System Background Layer */}
-      <div className="absolute md:inset-0 top-20 md:top-0  flex items-center justify-center opacity-80 pointer-events-none">
+      <div className="absolute inset-0  flex items-center justify-center opacity-80 pointer-events-none">
         <SolarSystem />
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-[300px] md:mt-[400px]">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-[250px] md:mt-[400px]">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-extrabold mb-6"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6"
         >
           <span className="text-primary">{t.hero.greeting}</span> {t.hero.name}
         </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
         >
           {t.hero.description_start}
           <span className="text-primary font-bold">
