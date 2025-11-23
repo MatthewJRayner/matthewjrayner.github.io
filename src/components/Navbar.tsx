@@ -6,8 +6,13 @@ import { Moon, Sun, Menu, X, Globe } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Language } from "@/lib/translations";
+import MagneticWrapper from "./MagneticWrapper";
 
-export default function Navbar() {
+interface NavbarProps {
+  onOpenAbout?: () => void;
+}
+
+export default function Navbar({ onOpenAbout }: NavbarProps) {
   const { theme, setTheme } = useTheme();
   const { t, language, setLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
@@ -36,20 +41,20 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {/* <Link href="#about" className="hover:text-primary transition-colors font-medium">{t.nav.about}</Link> */}
-          <Link href="#projects" className="hover:text-primary transition-colors font-medium">{t.nav.projects}</Link>
-          <Link href="#contact" className="hover:text-primary transition-colors font-medium">{t.nav.contact}</Link>
-          
+          <button onClick={onOpenAbout} className="hover:text-primary transition-colors font-medium px-4 py-2 block cursor-pointer">{t.nav.about}</button>
+          <Link href="#projects" className="hover:text-primary transition-colors font-medium px-4 py-2 block cursor-pointer">{t.nav.projects}</Link>
+          <Link href="#contact" className="hover:text-primary transition-colors font-medium px-4 py-2 block cursor-pointer">{t.nav.contact}</Link>
+
           {/* Language Selector */}
           <div className="relative">
-            <button 
+            <button
               onClick={() => setIsLangOpen(!isLangOpen)}
               className="flex items-center space-x-1 hover:text-primary transition-colors cursor"
             >
               <Globe size={20} />
               <span className="uppercase text-sm font-bold">{language}</span>
             </button>
-            
+
             {isLangOpen && (
               <div className="absolute top-full right-0 mt-2 w-32 glass rounded-xl overflow-hidden flex flex-col shadow-xl">
                 {languages.map((lang) => (
@@ -76,7 +81,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-           <button onClick={toggleTheme} className="p-2">
+          <button onClick={toggleTheme} className="p-2">
             {mounted && theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -88,10 +93,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-20 left-6 right-6 glass rounded-2xl p-6 flex flex-col space-y-4 md:hidden animate-in slide-in-from-top-5">
-          <Link href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.about}</Link>
+          <button onClick={() => { onOpenAbout?.(); setIsMenuOpen(false); }} className="text-lg font-medium text-left">{t.nav.about}</button>
           <Link href="#projects" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.projects}</Link>
           <Link href="#contact" onClick={() => setIsMenuOpen(false)} className="text-lg font-medium">{t.nav.contact}</Link>
-          
+
           <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
             <p className="text-sm text-gray-500 mb-2">Select Language</p>
             <div className="flex space-x-4">

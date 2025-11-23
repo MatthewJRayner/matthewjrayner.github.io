@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import MagneticWrapper from "./MagneticWrapper";
 
 const planets = [
   { name: "mercury", size: 10, distance: 50, duration: 4, color: "#8d8d8d" },
@@ -38,39 +39,40 @@ export default function SolarSystem() {
       {planets.map((planet, index) => {
         const initialRotation = index % 2 === 0 ? 0 : 180;
         return (
-        <motion.div
-          key={planet.name}
-          className="absolute rounded-full border border-gray-300/20"
-          style={{
-            width: planet.distance * 2,
-            height: planet.distance * 2,
-          }}
-          initial={{ rotate: initialRotation }}
-          animate={{ rotate: initialRotation + 360 }}
-          transition={{
-            duration: planet.duration * 5,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        >
           <motion.div
-            className="absolute rounded-full"
+            key={planet.name}
+            className="absolute rounded-full border border-gray-300/20"
             style={{
-              width: planet.size,
-              height: planet.size,
-              backgroundColor: planet.color,
-              top: "50%",
-              left: "100%",
-              marginTop: -planet.size / 2,
-              marginLeft: -planet.size / 2,
-              boxShadow: `0 0 10px ${planet.color}`,
+              width: planet.distance * 2,
+              height: planet.distance * 2,
+            }}
+            initial={{ rotate: initialRotation }}
+            animate={{ rotate: initialRotation + 360 }}
+            transition={{
+              duration: planet.duration * 5,
+              repeat: Infinity,
+              ease: "linear",
             }}
           >
-            {planet.ring && (
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] border border-gray-400/50 rounded-full" />
-            )}
+            <MagneticWrapper
+              className="absolute rounded-full pointer-events-auto"
+              strength={1.0}
+              style={{
+                width: planet.size,
+                height: planet.size,
+                backgroundColor: planet.color,
+                top: "50%",
+                left: "100%",
+                marginTop: -planet.size / 2,
+                marginLeft: -planet.size / 2,
+                boxShadow: `0 0 10px ${planet.color}`,
+              }}
+            >
+              {planet.ring && (
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] border border-gray-400/50 rounded-full" />
+              )}
+            </MagneticWrapper>
           </motion.div>
-        </motion.div>
         );
       })}
     </div>

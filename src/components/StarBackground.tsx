@@ -1,12 +1,22 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useScroll, useVelocity } from "framer-motion";
 
 export default function StarBackground() {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+
+  // Scroll velocity for warp effect
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+  
+  // Map velocity to warp stretch (scaleY)
+  // When scrolling fast, stars stretch vertically
+  const warpScale = useTransform(smoothVelocity, [0, 1000], [1, 5]);
+  const warpOpacity = useTransform(smoothVelocity, [0, 1000], [0.4, 0.8]);
 
   const springConfig = { damping: 20, stiffness: 100 }
   const x = useSpring(mouseX, springConfig)
@@ -20,8 +30,20 @@ export default function StarBackground() {
       mouseY.set(e.clientY);
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        mouseX.set(e.touches[0].clientX);
+        mouseY.set(e.touches[0].clientY);
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
   }, [mouseX, mouseY]);
 
   const [stars, setStars] = useState<{ id: number; x: number; y: number; size: number; depth: number; delay: number; duration: number }[]>([]);
@@ -47,6 +69,8 @@ export default function StarBackground() {
           star={star} 
           x={x} 
           y={y} 
+          warpScale={warpScale}
+          warpOpacity={warpOpacity}
           windowSize={windowSize} 
         />
       ))}
@@ -58,11 +82,15 @@ function Star({
   star, 
   x, 
   y, 
+  warpScale,
+  warpOpacity,
   windowSize 
 }: { 
   star: { id: number; x: number; y: number; size: number; depth: number; delay: number; duration: number };
   x: any;
   y: any;
+  warpScale: any;
+  warpOpacity: any;
   windowSize: { width: number; height: number };
 }) {
   const xPos = useTransform(x, (value: number) => (value - windowSize.width / 2) * star.depth * -0.15);
@@ -76,9 +104,10 @@ function Star({
         top: `${star.y}%`,
         width: star.size,
         height: star.size,
-        opacity: 0.4,
+        opacity: warpOpacity, // Use dynamic opacity based on speed
         x: xPos,
         y: yPos,
+        scaleY: warpScale, // Stretch vertically based on speed
       }}
       animate={{
         opacity: [0.4, 0.8, 0.4],
