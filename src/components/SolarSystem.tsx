@@ -63,7 +63,7 @@ export default function SolarSystem() {
                 backgroundColor: planet.color,
                 top: "50%",
                 left: "100%",
-                marginTop: -planet.size / 2,
+                marginTop: (-planet.size / 2),
                 marginLeft: -planet.size / 2,
                 boxShadow: `0 0 10px ${planet.color}`,
               }}

@@ -82,6 +82,35 @@ export default function Projects() {
 
   const projects = [
     {
+      title: t.projects.drumroll.title,
+      tech: "Next.js, Django, Tailwind, AWS",
+      desc: t.projects.drumroll.desc,
+      links: {
+        live: "https://www.drumrollrota.com",
+      },
+      image: "/Assets/drumroll-mockup.png",
+    },
+    {
+      title: t.projects.orpheus.title,
+      tech: "Next.js, Django, Tailwind, Postgres",
+      desc: t.projects.orpheus.desc,
+      links: {
+        github: "https://github.com/MatthewJRayner/collections",
+        live: "https://orpheus-archives.vercel.app",
+      },
+      image: "/Assets/collection-mockup.png",
+    },
+    {
+      title: t.projects.vox_mundi.title,
+      tech: "Next.js, Django, Tailwind, Postgres",
+      desc: t.projects.vox_mundi.desc,
+      links: {
+        github: "https://github.com/MatthewJRayner/vox-mundi",
+        live: "https://vox-mundi.vercel.app",
+      },
+      image: "/Assets/vox-mundi.png",
+    },
+    {
       title: t.projects.sales_dashboard.title,
       tech: "React, Django, Postgres",
       desc: t.projects.sales_dashboard.desc,

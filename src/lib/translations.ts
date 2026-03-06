@@ -17,6 +17,18 @@ export const translations = {
     projects: {
       title: "Here are some of my ",
       title_highlight: "projects",
+      drumroll: {
+        title: "Drumroll",
+        desc: "Co-Founder and sole engineer for a startup company for rota creation and employee management for businesses. Currently working with a hospitality business in North London and in talks to expand to more businesses in the area. Fully deployed on AWS with CI/CD pipelines and custom authentication. ",
+      },
+      orpheus: {
+        title: "Orpheus Archives",
+        desc: "A full-stack catalogue app for films, books, music and more. Implemented modular data models and custom search, sorting and analytic endpoints.",
+      },
+      vox_mundi: {
+        title: "Vox Mundi",
+        desc: "An interactive global culture tracker and hub built using Next.js 14, Django REST, and PostgresSQL (Neon). Deployed a three-tiered architecture with on Vercel, Railway, and Neon with full CI/CD pipelines. Engineered complex relational models for cultures, media, and timelines.",
+      },
       sales_dashboard: {
         title: "Sales Dashboard",
         desc: "Custom sales dashboard for my client in the hospitality industry. Full-stack application with user authentication, data visualization, and real-time updates. The link leads to a preview of the site with dummy-data not connected to a backend.",
@@ -61,6 +73,18 @@ export const translations = {
     projects: {
       title: "Hier sind einige meiner ",
       title_highlight: "Projekte",
+      drumroll: {
+        title: "Drumroll",
+        desc: "Mitgründer und einziger Softwareentwickler eines Start-ups für Dienstplanerstellung und Personalmanagement. Derzeit arbeite ich mit einem Gastronomiebetrieb in Nord-London zusammen und befinde mich in Gesprächen über eine Expansion auf weitere Betriebe in der Region. Die Lösung ist vollständig auf AWS mit CI/CD-Pipelines und benutzerdefinierter Authentifizierung bereitgestellt.",
+      },
+      orpheus: {
+        title: "Orpheus Archives",
+        desc: "Eine Full-Stack-Katalog-App für Filme, Bücher, Musik und mehr. Implementierung modularer Datenmodelle sowie benutzerdefinierter Endpunkte für Suche, Sortierung und Analysen.",
+      },
+      vox_mundi: {
+        title: "Vox Mundi",
+        desc: "Ein interaktiver globaler Kultur-Tracker und Hub, erstellt mit Next.js 14, Django REST und PostgreSQL (Neon). Implementierung einer Drei-Schichten-Architektur auf Vercel, Railway und Neon mit vollständigen CI/CD-Pipelines. Entwicklung komplexer relationaler Modelle für Kulturen, Medien und Zeitachsen.",
+      },
       sales_dashboard: {
         title: "Sales Dashboard",
         desc: "Individuelles Verkaufs-Dashboard für meinen Kunden in der Gastronomiebranche. Full-Stack-Anwendung mit Benutzer-Authentifizierung, Datenvisualisierung und Echtzeit-Updates. Der Link führt zu einer Vorschau der Website mit Dummy-Daten, die nicht mit einem Backend verbunden sind.",
@@ -105,6 +129,18 @@ export const translations = {
     projects: {
       title: "こちらは私の ",
       title_highlight: "プロジェクト",
+      drumroll: {
+        title: "ドラムロール",
+        desc: "企業向けのシフト作成・従業員管理システムを開発するスタートアップの共同創業者兼唯一のエンジニアです。現在は北ロンドンのホスピタリティ企業と提携しており、近隣エリアへの拡大に向けて協議を進めています。CI/CDパイプラインと独自認証を実装し、AWS上でフル稼働しています。",
+      },
+      orpheus: {
+        title: "オルフィウスアーカイブ",
+        desc: "映画、本、音楽などを網羅したフルスタックのカタログアプリ。モジュール化されたデータモデルを採用し、独自の検索、ソート、および分析用エンドポイントを実装しました。",
+      },
+      vox_mundi: {
+        title: "ボックス・ムンド",
+        desc: "Next.js 14、Django REST、PostgreSQL（Neon）を使用して構築された、インタラクティブなグローバル文化トラッカー兼ハブ。Vercel、Railway、Neonを使用した3層アーキテクチャをデプロイし、完全なCI/CDパイプラインを構築しました。文化、メディア、タイムラインに関する複雑なリレーショナルモデルを設計・実装しました。",
+      },
       sales_dashboard: {
         title: "販売ダッシュボード",
         desc: "ホスピタリティ業界のクライアント向けに作成したカスタム販売ダッシュボードです。ユーザー認証、データの可視化、リアルタイム更新を備えたフルスタックアプリケーションです。リンクはバックエンドに接続されていないダミーデータのプレビューに移動します。",
@@ -149,6 +185,18 @@ export const translations = {
     projects: {
       title: "Işte bazı ",
       title_highlight: "projelerim",
+      drumroll: {
+        title: "Drumroll",
+        desc: "İşletmeler için vardiya planlama ve personel yönetimi sunan bir girişimin kurucu ortağı ve tek mühendisyim. Şu an Kuzey Londra'da bir hizmet sektörü işletmesiyle çalışmaktayım ve bölgedeki diğer işletmelerle büyüme görüşmeleri sürdürüyorum. Sistem; CI/CD süreçleri ve özel kimlik doğrulama ile tamamen AWS üzerinde çalışmaktadır.",
+      },
+      orpheus: {
+        title: "Orpheus Archives",
+        desc: "Filmler, kitaplar, müzik ve daha fazlası için tam bir Full-Stack-Katalog-App. Modüler veri modelleri ve benutzerdefinierte Endpunkte für Suche, Sortierung und Analysen.",
+      },
+      vox_mundi: {
+        title: "Vox Mundi",
+        desc: "Next.js 14, Django REST ve PostgreSQL (Neon) kullanılarak geliştirilmiş, interaktif bir küresel kültür takipçisi ve merkezi. Vercel, Railway ve Neon üzerinde, tam CI/CD süreçleriyle üç katmanlı (three-tier) bir mimari uygulandı. Kültürler, medya ve zaman çizelgeleri için karmaşık ilişkisel veri modelleri tasarlandı.",
+      },
       sales_dashboard: {
         title: "Satış Paneli",
         desc: "Misafirperverlik sektöründeki bir müşterim için özel olarak geliştirilmiş bir satış paneli. Kullanıcı kimlik doğrulaması, veri görselleştirmesi ve gerçek zamanlı güncellemeler içeren tam kapsamlı bir uygulama. Bağlantı, arka uca bağlı olmayan sahte verilerle oluşturulmuş bir önizlemeye yönlendirir.",
